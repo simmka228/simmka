@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>проект.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+проект.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;ru&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">name</span><span class="s3">=&quot;viewport&quot; </span><span class="s2">content</span><span class="s3">=&quot;width=device-width, initial-scale=1.0&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Виртуальный тур по школе</span><span class="s0">&lt;/title&gt;</span>
+    <span class="s0">&lt;style&gt;</span>
+        <span class="s1">body {</span>
+            <span class="s1">display: flex;</span>
+            <span class="s1">flex-direction: column;</span>
+            <span class="s1">align-items: center;</span>
+            <span class="s1">justify-content: flex-start;</span>
+            <span class="s1">height: 100vh;</span>
+            <span class="s1">margin: 0;</span>
+            <span class="s1">text-align: center;</span>
+        <span class="s1">}</span>
+        <span class="s1">header {</span>
+            <span class="s1">display: flex;</span>
+            <span class="s1">align-items: center;</span>
+            <span class="s1">justify-content: center; /* Центрируем контент в заголовке */</span>
+            <span class="s1">width: 100%;</span>
+            <span class="s1">padding: 20px;</span>
+            <span class="s1">box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);</span>
+        <span class="s1">}</span>
+        <span class="s1">.logo {</span>
+            <span class="s1">width: 50px; /* Укажите ширину логотипа */</span>
+            <span class="s1">height: auto;</span>
+            <span class="s1">margin-right: 20px;</span>
+        <span class="s1">}</span>
+        <span class="s1">.title {</span>
+            <span class="s1">flex-grow: 1; /* Позволяет заголовку занимать оставшееся пространство */</span>
+            <span class="s1">text-align: center; /* Центрируем текст заголовка */</span>
+        <span class="s1">}</span>
+        <span class="s1">.clickable-image {</span>
+            <span class="s1">margin-top: 50px;</span>
+            <span class="s1">cursor: pointer;</span>
+        <span class="s1">}</span>
+        <span class="s1">table {</span>
+            <span class="s1">margin-top: 20px;</span>
+            <span class="s1">border-collapse: collapse;</span>
+            <span class="s1">width: 80%; /* Устанавливаем ширину таблицы */</span>
+        <span class="s1">}</span>
+        <span class="s1">th, td {</span>
+            <span class="s1">padding: 8px;</span>
+            <span class="s1">text-align: center;</span>
+        <span class="s1">}</span>
+    <span class="s0">&lt;/style&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+
+<span class="s0">&lt;header&gt;</span>
+    <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://sch1357uv.mskobr.ru/&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;{{ url_for('static', filename='logo.png') }}&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Логотип&quot; </span><span class="s2">class</span><span class="s3">=&quot;logo&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;/a&gt;</span>
+    <span class="s0">&lt;h1 </span><span class="s2">class</span><span class="s3">=&quot;title&quot;</span><span class="s0">&gt;</span><span class="s1">Виртуальный тур по школе</span><span class="s0">&lt;/h1&gt;</span>
+<span class="s0">&lt;/header&gt;</span>
+
+<span class="s0">&lt;table&gt;</span>
+    <span class="s0">&lt;tr&gt;</span>
+        <span class="s0">&lt;td </span><span class="s2">class</span><span class="s3">=&quot;column-1&quot;</span><span class="s0">&gt;</span><span class="s1">Первый этаж</span><span class="s0">&lt;/td&gt;</span>
+        <span class="s0">&lt;td </span><span class="s2">class</span><span class="s3">=&quot;column-2&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;{{ url_for('first_flour') }}&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;{{ url_for('static', filename='IT-poligon.jpeg') }}&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Первый этаж&quot; </span><span class="s2">class</span><span class="s3">=&quot;firstFlour&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;/a&gt;</span>
+        <span class="s0">&lt;/td&gt;</span>
+    <span class="s0">&lt;/tr&gt;</span>
+    <span class="s0">&lt;tr&gt;</span>
+        <span class="s0">&lt;td </span><span class="s2">class</span><span class="s3">=&quot;column-1&quot;</span><span class="s0">&gt;</span><span class="s1">Второй этаж</span><span class="s0">&lt;/td&gt;</span>
+        <span class="s0">&lt;td </span><span class="s2">class</span><span class="s3">=&quot;column-2&quot;</span><span class="s0">&gt;</span><span class="s1">Тут будет план</span><span class="s0">&lt;/td&gt;</span>
+    <span class="s0">&lt;/tr&gt;</span>
+    <span class="s0">&lt;tr&gt;</span>
+        <span class="s0">&lt;td </span><span class="s2">class</span><span class="s3">=&quot;column-1&quot;</span><span class="s0">&gt;</span><span class="s1">Третий этаж</span><span class="s0">&lt;/td&gt;</span>
+        <span class="s0">&lt;td </span><span class="s2">class</span><span class="s3">=&quot;column-2&quot;</span><span class="s0">&gt;</span><span class="s1">Тут будет план</span><span class="s0">&lt;/td&gt;</span>
+    <span class="s0">&lt;/tr&gt;</span>
+<span class="s0">&lt;/table&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span>
+</pre>
+</body>
+</html>
